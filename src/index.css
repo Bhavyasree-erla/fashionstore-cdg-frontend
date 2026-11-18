@@ -1,0 +1,1232 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:linear-gradient(135deg,#e0f2fe,#f8fafc,#dbeafe);
+  min-height:100vh;
+  color:#1e293b;
+}
+
+a{
+  text-decoration:none;
+}
+nav {
+  background: #382e28;
+  padding: 20px 40px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+nav > a {
+  color: white;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav > a:hover {
+  color: #93c5fd;
+}
+main{
+  width:90%;
+  max-width:1200px;
+  margin:30px auto;
+}
+
+h1{
+  margin-bottom:20px;
+  color:#0f172a;
+}
+
+.destinations{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+  gap:25px;
+}
+
+.card{
+  background:linear-gradient(145deg,#ffffff,#f8fafc);
+  border-radius:15px;
+  overflow:hidden;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 15px 30px rgba(30,58,138,0.18);
+}
+
+.card>img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  transition:0.4s;
+}
+
+.card:hover img{
+  transform:scale(1.08);
+}
+
+.card>h3{
+  padding:15px 15px 8px;
+  color:#0f172a;
+}
+
+.card>p{
+  padding:4px 15px;
+  color:#475569;
+}
+
+.card>a{
+  display:block;
+  margin:15px;
+  padding:12px;
+  text-align:center;
+  background:linear-gradient(135deg,#2563eb,#06b6d4);
+  color:white;
+  border-radius:8px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.card>a:hover{
+  transform:scale(1.03);
+  box-shadow:0 5px 15px rgba(37,99,235,0.3);
+}
+
+.details{
+  background:linear-gradient(145deg,#ffffff,#f8fafc);
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+
+.details>img{
+  width:100%;
+  height:450px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:20px;
+}
+
+.details h1{
+  color:#0f172a;
+  margin-bottom:15px;
+}
+
+.details h3{
+  margin-top:18px;
+  color:#2563eb;
+}
+
+.details p{
+  margin-top:5px;
+  line-height:1.7;
+  color:#475569;
+}
+
+.details ul{
+  margin-top:10px;
+  padding-left:20px;
+}
+
+.details li{
+  margin-bottom:8px;
+  color:#475569;
+}
+
+/* COLLECTIONS PAGE */
+
+.destinations-page {
+  padding: 55px 7%;
+  background: #faf8f5;
+  min-height: 100vh;
+}
+
+.collections-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.collections-heading p:first-child {
+  color: #9b795c;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.collections-heading h1 {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  font-weight: 400;
+  color: #382c27;
+  margin: 12px 0;
+}
+
+.collections-heading p:last-child {
+  color: #82766e;
+  font-size: 14px;
+}
+
+/* PRODUCT GRID */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* PRODUCT CARD */
+
+.product-card {
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid #eee7df;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+/* PRODUCT IMAGE */
+
+.product-image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: #f1ece6;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* PRODUCT INFORMATION */
+
+.product-info {
+  padding: 20px;
+}
+
+.product-category {
+  color: #a17b5c;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+
+.product-info h3 {
+  color: #382c27;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-weight: 400;
+  margin: 10px 0;
+}
+
+.product-description {
+  color: #81766e;
+  font-size: 13px;
+  line-height: 1.6;
+  min-height: 42px;
+}
+
+.product-price {
+  color: #49372d;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.product-rating {
+  font-size: 13px;
+}
+
+/* BUTTONS */
+
+.product-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.product-buttons a,
+.product-buttons button {
+  flex: 1;
+  text-align: center;
+  padding: 10px 5px;
+  font-size: 12px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #8b6b52;
+}
+
+.view-btn {
+  background: #49372d;
+  color: white;
+}
+
+.edit-btn {
+  background: white;
+  color: #49372d;
+}
+
+.delete-btn {
+  background: #fff;
+  color: #8b3939;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-image {
+    height: 280px;
+  }
+
+  .collections-heading h1 {
+    font-size: 29px;
+  }
+
+  .destinations-page {
+    padding: 35px 5%;
+  }
+}
+
+/* ÉLORA LUXURY HOMEPAGE */
+
+.home-page {
+  background: #faf8f4;
+  color: #382e28;
+}
+
+.hero-section {
+  min-height: 570px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  padding: 55px 8%;
+  gap: 55px;
+}
+
+.hero-content {
+  max-width: 470px;
+}
+
+.hero-label,
+.section-label {
+  color: #a17d5e;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.hero-content h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 4.5vw, 58px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 25px 0;
+}
+
+.hero-description {
+  color: #81766d;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 390px;
+  margin-bottom: 30px;
+}
+
+.hero-image {
+  height: 490px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.shop-button,
+.collection-button {
+  display: inline-block;
+  background: #49372d;
+  color: #fff;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  transition: background 0.3s ease;
+}
+
+.shop-button:hover,
+.collection-button:hover {
+  background: #8b6b52;
+}
+
+.about-section {
+  text-align: center;
+  padding: 85px 20px;
+  background: #f2eee8;
+}
+
+.about-section h2,
+.collection-section h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 36px;
+  margin: 18px 0;
+}
+
+.about-section > p:last-child,
+.collection-section p:not(.section-label) {
+  color: #81766d;
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.collection-section {
+  text-align: center;
+  padding: 85px 20px;
+}
+
+.collection-section .collection-button {
+  margin-top: 25px;
+}
+
+.home-footer {
+  text-align: center;
+  padding: 35px 20px;
+  background: #49372d;
+  color: #fff;
+}
+
+.home-footer h2 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 5px;
+}
+
+.home-footer p {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #d9c7b5;
+}
+
+.home-footer span {
+  display: block;
+  margin-top: 20px;
+  font-size: 9px;
+  color: #c9b8a8;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    padding: 40px 6%;
+    gap: 30px;
+  }
+
+  .hero-image {
+    height: 380px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .about-section,
+  .collection-section {
+    padding: 60px 20px;
+  }
+
+  .about-section h2,
+  .collection-section h2 {
+    font-size: 29px;
+  }
+}
+/* AUTH PAGES */
+
+.auth-container{
+ min-height:70vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+
+.auth-card{
+ width:100%;
+ max-width:450px;
+ background:white;
+ padding:40px;
+ border-radius:20px;
+ box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.auth-card h1{
+ text-align:center;
+ margin-bottom:25px;
+ color:#0f172a;
+}
+
+.auth-card input{
+ width:100%;
+ padding:14px;
+ margin-bottom:18px;
+ border:2px solid #e2e8f0;
+ border-radius:10px;
+ font-size:16px;
+ outline:none;
+ transition:.3s;
+}
+
+.auth-card input:focus{
+ border-color:#2563eb;
+ box-shadow:0 0 12px rgba(37,99,235,.15);
+}
+
+.auth-btn{
+ width:100%;
+ padding:14px;
+ border:none;
+ border-radius:10px;
+ background:linear-gradient(
+   135deg,
+   #2563eb,
+   #06b6d4
+ );
+ color:white;
+ font-size:16px;
+ font-weight:bold;
+ cursor:pointer;
+ transition:.3s;
+}
+
+.auth-btn:hover{
+ transform:translateY(-3px);
+ box-shadow:0 10px 20px rgba(37,99,235,.25);
+}
+
+.auth-card p{
+ text-align:center;
+ margin-top:15px;
+ color:#64748b;
+}
+
+.auth-card p a{
+ color:#2563eb;
+ font-weight:bold;
+}
+.favorite-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ff6b35;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.favorite-btn:hover {
+  background: #e85d2a;
+}
+.favorites-container {
+  padding: 40px;
+  min-height: 80vh;
+}
+
+.page-title {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.favorite-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.favorite-card:hover {
+  transform: translateY(-5px);
+}
+
+.favorite-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.favorite-content {
+  padding: 20px;
+}
+
+.favorite-content h2 {
+  margin-bottom: 10px;
+}
+
+.favorite-content p {
+  margin: 8px 0;
+}
+
+.favorite-content button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  background: crimson;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.favorite-content button:hover {
+  background: darkred;
+}
+
+.empty-favorites {
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* ===== ÉLORA LUXURY FINISH ===== */
+
+body {
+  background: #f8f5ef !important;
+}
+
+.home-page {
+  width: 100%;
+  background: #f8f5ef;
+  color: #30231f;
+}
+
+/* NAVBAR */
+nav {
+  background: #382c26 !important;
+  border-bottom: 2px solid #b99a75;
+  padding: 20px 28px !important;
+}
+
+nav a {
+  color: #fffaf2 !important;
+  text-decoration: none;
+  margin-right: 25px;
+  font-size: 15px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d9b98c !important;
+}
+
+/* HERO */
+.luxury-hero {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 55px;
+  padding: 65px 7%;
+  min-height: 620px;
+  background: #faf7f1;
+}
+
+.hero-text {
+  max-width: 490px;
+}
+
+.luxury-tag,
+.section-label {
+  color: #a17b5c;
+  letter-spacing: 4px;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.hero-text h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(43px, 5vw, 65px);
+  line-height: 1.12;
+  font-weight: 400;
+  color: #30231f;
+  margin: 28px 0;
+}
+
+.luxury-description {
+  color: #82766d;
+  font-size: 15px;
+  line-height: 2;
+  max-width: 400px;
+  margin-bottom: 30px;
+}
+
+.luxury-button {
+  display: inline-block;
+  background: #49372d;
+  color: #fff !important;
+  padding: 16px 28px;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.luxury-button:hover {
+  background: #8b654b;
+  transform: translateY(-2px);
+}
+
+.luxury-hero-image {
+  height: 510px;
+  overflow: hidden;
+  background: #e9dfd2;
+}
+
+.luxury-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.luxury-hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* BRAND PHILOSOPHY */
+.brand-story {
+  text-align: center;
+  padding: 85px 20px;
+  background: #eee7dc;
+}
+
+.brand-story h2 {
+  font-family: Georgia, serif;
+  font-size: 42px;
+  font-weight: 400;
+  color: #382c26;
+  margin: 20px 0;
+}
+
+.brand-story > p:last-child {
+  color: #82766d;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* FEATURE SECTION */
+.home-feature {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 75px;
+  padding: 85px 9%;
+  background: #faf7f1;
+}
+
+.feature-image {
+  height: 420px;
+  overflow: hidden;
+}
+
+.feature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feature-content h2 {
+  font-family: Georgia, serif;
+  font-size: 43px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #382c26;
+  margin: 22px 0;
+}
+
+.feature-content > p:not(.section-label) {
+  color: #82766d;
+  font-size: 14px;
+  line-height: 2;
+  margin-bottom: 28px;
+}
+
+/* FOOTER */
+.luxury-footer {
+  text-align: center;
+  background: #382c26;
+  color: #fffaf2;
+  padding: 48px 20px;
+  border-top: 2px solid #b99a75;
+}
+
+.luxury-footer h2 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 8px;
+}
+
+.luxury-footer p {
+  color: #d9b98c;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin: 15px 0;
+}
+
+.luxury-footer span {
+  display: block;
+  color: #c8b9ab;
+  font-size: 10px;
+  margin-top: 25px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .luxury-hero,
+  .home-feature {
+    grid-template-columns: 1fr;
+    padding: 40px 6%;
+    gap: 30px;
+  }
+
+  .hero-text h1 {
+    font-size: 43px;
+  }
+
+  .luxury-hero-image {
+    height: 380px;
+  }
+
+  .brand-story h2,
+  .feature-content h2 {
+    font-size: 30px;
+  }
+
+  .feature-image {
+    height: 320px;
+  }
+}
+
+/* ===== ÉLORA PRODUCT DETAILS PAGE ===== */
+
+.elora-details-page {
+  background: #faf7f1;
+  color: #382c26;
+  min-height: 100vh;
+  padding: 35px 7%;
+}
+
+.details-breadcrumb {
+  font-size: 13px;
+  color: #927b69;
+  margin-bottom: 35px;
+}
+
+.details-breadcrumb a {
+  color: #927b69;
+  text-decoration: none;
+}
+
+.details-breadcrumb a:hover {
+  color: #49372d;
+}
+
+.elora-product-main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: start;
+  max-width: 1250px;
+  margin: auto;
+}
+
+.elora-product-image {
+  height: 590px;
+  background: #eee7dc;
+  overflow: hidden;
+}
+
+.elora-product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.elora-product-info {
+  padding: 15px 0;
+}
+
+.elora-small-label {
+  color: #a17b5c;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.elora-category {
+  color: #a17b5c;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+
+.elora-product-info h1 {
+  font-family: Georgia, serif;
+  font-size: 39px;
+  line-height: 1.2;
+  font-weight: 400;
+  margin: 12px 0;
+}
+
+.elora-rating {
+  color: #a17b5c;
+  font-size: 15px;
+}
+
+.elora-rating span {
+  color: #82766d;
+  font-size: 13px;
+}
+
+.elora-price {
+  font-size: 27px;
+  margin: 25px 0;
+  color: #49372d;
+}
+
+.elora-line {
+  height: 1px;
+  background: #ded2c4;
+  margin: 25px 0;
+}
+
+.elora-product-info h3 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.elora-description {
+  color: #786d64;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 15px;
+}
+
+.elora-product-meta {
+  background: #eee7dc;
+  padding: 18px 22px;
+  margin: 25px 0;
+}
+
+.elora-product-meta p {
+  color: #66574d;
+  font-size: 13px;
+  margin: 10px 0;
+}
+
+.elora-back-button {
+  display: inline-block;
+  background: #49372d;
+  color: white;
+  text-decoration: none;
+  padding: 15px 24px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+.elora-back-button:hover {
+  background: #9b795c;
+}
+
+/* HIGHLIGHTS */
+
+.elora-extra-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.elora-extra-section h2,
+.elora-styling-section h2 {
+  font-family: Georgia, serif;
+  font-size: 37px;
+  font-weight: 400;
+  margin: 15px 0 35px;
+}
+
+.elora-highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.elora-highlight-card {
+  background: #eee7dc;
+  padding: 35px 22px;
+  min-height: 150px;
+}
+
+.elora-highlight-card span {
+  color: #a17b5c;
+  font-family: Georgia, serif;
+  font-size: 25px;
+}
+
+.elora-highlight-card p {
+  color: #66574d;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 15px;
+}
+
+/* STYLING INSPIRATION */
+
+.elora-styling-section {
+  background: #382c26;
+  color: #fffaf2;
+  padding: 55px 8%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.elora-styling-section h2 {
+  margin-bottom: 0;
+}
+
+.elora-styling-section > p {
+  color: #e0d3c5;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* FOOTER */
+
+.elora-detail-footer {
+  text-align: center;
+  padding: 55px 15px 25px;
+}
+
+.elora-detail-footer h2 {
+  font-family: Georgia, serif;
+  letter-spacing: 8px;
+  font-weight: 400;
+}
+
+.elora-detail-footer p {
+  color: #a17b5c;
+  letter-spacing: 3px;
+  font-size: 10px;
+  margin: 12px 0;
+}
+
+.elora-detail-footer span {
+  color: #82766d;
+  font-size: 12px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .elora-product-main,
+  .elora-styling-section {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .elora-product-image {
+    height: 400px;
+  }
+
+  .elora-product-info h1 {
+    font-size: 31px;
+  }
+
+  .elora-highlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .elora-details-page {
+    padding: 25px 5%;
+  }
+}
+
+
+/* ÉLORA COLLECTION FILTERS */
+
+.filter-section {
+  max-width: 1200px;
+  margin: 0 auto 35px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-section input,
+.filter-section select {
+  padding: 13px 16px;
+  border: 1px solid #d8c8b8;
+  background: #fffdf9;
+  color: #49372d;
+  font-size: 14px;
+  outline: none;
+  border-radius: 2px;
+}
+
+.filter-section input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-section select {
+  min-width: 165px;
+  cursor: pointer;
+}
+
+.filter-section input:focus,
+.filter-section select:focus {
+  border-color: #987354;
+}
+
+.no-products {
+  text-align: center;
+  padding: 40px;
+  color: #806b59;
+  font-family: Georgia, serif;
+  font-size: 19px;
+}
+
+@media (max-width: 600px) {
+  .filter-section {
+    flex-direction: column;
+  }
+
+  .filter-section input,
+  .filter-section select {
+    width: 100%;
+  }
+}
+
+/* EDIT BUTTON */
+.edit-btn {
+  background-color: #f3ece5;
+  color: #594337;
+  border: 1px solid #b99b83;
+  padding: 13px 25px;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #594337;
+  color: white;
+  border-color: #594337;
+  transform: translateY(-2px);
+}
+
+/* DELETE BUTTON */
+.delete-btn {
+  background-color: #fff1ef;
+  color: #a94442;
+  border: 1px solid #d9a09a;
+  padding: 13px 22px;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #a94442;
+  color: white;
+  border-color: #a94442;
+  transform: translateY(-2px);
+}
+
+/* FINAL ELORA NAVBAR FIX */
+
+nav.elora-navbar {
+  background: #faf8f4 !important;
+  padding: 18px 7% !important;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 20px !important;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05) !important;
+}
+
+nav.elora-navbar .elora-logo {
+  display: flex !important;
+  flex-direction: column !important;
+  color: #49372d !important;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+nav.elora-navbar .elora-logo span {
+  display: block !important;
+  color: #987354 !important;
+  font-size: 9px !important;
+  margin-top: 5px;
+}
+
+nav.elora-navbar .nav-links {
+  display: flex !important;
+  align-items: center !important;
+  gap: 30px !important;
+}
+
+nav.elora-navbar .nav-links a {
+  color: #49372d !important;
+  text-decoration: none !important;
+}
+
